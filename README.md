@@ -7,6 +7,12 @@ but : avoir une stack de micro service spring-boot avec :
 
 le tout orchestré par un docker-compose
 
-# Spring boot
+## Spring boot
 
 version 2.2.6
+
+## Lancement
+
+```
+docker-compose up -d
+```
