@@ -7,7 +7,18 @@ services:
       - "8761:8761"
     networks:
       - "discovery"
+  gateway:
+    build: ./gateway
+    container_name: gateway
+    depends_on:
+      - "eureka"
+    links:
+      - "eureka"
+    ports:
+      - "80:80"
+    networks:
+      - "discovery"
     environment:
-      - EUREKA_INSTANCE_PREFERIPADDRESS=true
+      - EUREKA_SERVICE_URL=http://eureka:8761
 networks:
   discovery:
