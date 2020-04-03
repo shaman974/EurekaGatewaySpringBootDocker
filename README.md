@@ -29,6 +29,8 @@ cd gateway
 ./gradlew clean build
 ```
 
+Mettre à jour l'adresse IP de la machine dans .env (Contournement tant que l'on ne sait pas lié le reseau docker)
+
 ### Lancement via docker
 
 changer l'addresse IP dans le docker-compose :

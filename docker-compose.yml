@@ -20,7 +20,7 @@ services:
       - "discovery"
     environment:
       - EUREKA_SERVICE_URL=http://eureka:8761
-      - EUREKA_INSTANCE_STATUS_PAGE_URL=http://192.168.2.23:80/actuator/info
+      - EUREKA_INSTANCE_STATUS_PAGE_URL=http://${IP}:80/actuator/info
   commande:
     build: ./commande
     container_name: commande
@@ -35,6 +35,6 @@ services:
       - "discovery"
     environment:
       - EUREKA_SERVICE_URL=http://eureka:8761
-      - EUREKA_INSTANCE_STATUS_PAGE_URL=http://192.168.2.23:8081/actuator/info
+      - EUREKA_INSTANCE_STATUS_PAGE_URL=http://${IP}:8081/actuator/info
 networks:
   discovery:
